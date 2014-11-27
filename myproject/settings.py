@@ -13,12 +13,12 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASE_ENGINE = 'sqlite3'
-DATABASE_NAME = 'db.sqlite3'
-DATABASE_USER = 'opag'             # Not used with sqlite3.
+DATABASE_ENGINE = 'django.db.backends.postgresql_psycopg2'
+DATABASE_NAME = 'postgres'
+DATABASE_USER = 'postgres'             # Not used with sqlite3.
 DATABASE_PASSWORD = ''         # Not used with sqlite3.
-DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
-DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
+DATABASE_HOST = 'db'             # Set to empty string for localhost. Not used with sqlite3.
+DATABASE_PORT = 5432             # Set to empty string for default. Not used with sqlite3.
 
 # Local time zone for this installation. All choices can be found here:
 # http://www.postgresql.org/docs/current/static/datetime-keywords.html#DATETIME-TIMEZONE-SET-TABLE
@@ -68,7 +68,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates".
     # Always use forward slashes, even on Windows.
     #"/usr/local/www/opag/templates"
-    "templates"
+    'myproject/templates/'
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
